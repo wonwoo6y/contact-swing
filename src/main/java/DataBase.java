@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class DataBase {
 	Connection connection;
@@ -40,4 +41,7 @@ public class DataBase {
 		statement.close();
 	}
 
+	// public List<String> getMetaData() {
+	//
+	// }
 }

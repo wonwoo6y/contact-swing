@@ -6,23 +6,24 @@ import javax.swing.*;
 
 public class MenuGUI extends JFrame {
 	private DataBase dataBase;
-	JButton contactsOutput;
-	JButton contactsInput;
-	JButton contactsDeletion;
-	JButton exit;
+	private JButton contactsOutput;
+	private JButton contactsInput;
+	private JButton contactsDeletion;
+	private JButton exit;
 
 	public MenuGUI(DataBase dataBase) {
 		this.dataBase = dataBase;
-		makeMenuGUI();
+		makeGUI();
 	}
 
-	private void makeMenuGUI() {
+	private void makeGUI() {
 		setProperties();
 		setComponents();
 		addComponents();
 	}
 
 	private void setProperties() {
+		this.setTitle("메뉴 프레임");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLayout(null);
 		this.setSize(340, 145);
@@ -46,12 +47,12 @@ public class MenuGUI extends JFrame {
 	private void setContactsOutput() {
 		contactsOutput = new JButton("연락처 출력");
 		contactsOutput.setBounds(10, 10, 100, 50);
-		// contactsOutput.addActionListener(new ActionListener() {
-		// 	@Override
-		// 	public void actionPerformed(ActionEvent e) {
-		// 		new contactsOutputGUI(dataBase);
-		// 	}
-		// });
+		contactsOutput.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new ContactsOutputGUI(dataBase);
+			}
+		});
 	}
 
 	private void setContactsInput() {
@@ -60,7 +61,7 @@ public class MenuGUI extends JFrame {
 		// contactsInput.addActionListener(new ActionListener() {
 		// 	@Override
 		// 	public void actionPerformed(ActionEvent e) {
-		// 		new contactsInputGUI(dataBase);
+		// 		new ContactsInputGUI(dataBase);
 		// 	}
 		// });
 	}
@@ -71,7 +72,7 @@ public class MenuGUI extends JFrame {
 		// contactsDeletion.addActionListener(new ActionListener() {
 		// 	@Override
 		// 	public void actionPerformed(ActionEvent e) {
-		// 		new contactsDeletion(dataBase);
+		// 		new ContactsDeletion(dataBase);
 		// 	}
 		// });
 	}
