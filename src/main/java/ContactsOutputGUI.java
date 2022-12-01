@@ -1,12 +1,12 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
 
 public class ContactsOutputGUI extends JFrame {
 	private DataBase dataBase;
-	private JLabel studentIdMark;
-	private JTextField studentIdInputBox;
 	private JButton studentIdSelection;
 	private JTable studentIdOutput;
 	private JScrollPane scrollPane;
@@ -33,29 +33,9 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private void setComponents() {
-		setLabel();
-		setTextField();
 		setButton();
 		setTable();
 		setScrollPane((Component)studentIdOutput);
-	}
-
-	private void setLabel() {
-		setStudentIdMark();
-	}
-
-	private void setStudentIdMark() {
-		studentIdMark = new JLabel("학번");
-		studentIdMark.setBounds(10, 10, 30, 30);
-	}
-
-	private void setTextField() {
-		setStudentIdInputBox();
-	}
-
-	private void setStudentIdInputBox() {
-		studentIdInputBox = new JTextField();
-		studentIdInputBox.setBounds(50, 10, 100, 30);
 	}
 
 	private void setButton() {
@@ -63,8 +43,14 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private void setStudentIdInput() {
-		studentIdSelection = new JButton("확인");
-		studentIdSelection.setBounds(150, 10, 50, 30);
+		studentIdSelection = new JButton("출력");
+		studentIdSelection.setBounds(175, 10, 50, 30);
+		// studentIdSelection.addActionListener(new ActionListener() {
+		// 	@Override
+		// 	public void actionPerformed(ActionEvent e) {
+		//
+		// 	}
+		// });
 	}
 
 	private void setTable() {
@@ -81,8 +67,6 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private void addComponents() {
-		this.add(studentIdMark);
-		this.add(studentIdInputBox);
 		this.add(studentIdSelection);
 		this.add(scrollPane);
 	}
