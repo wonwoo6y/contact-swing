@@ -58,12 +58,12 @@ public class MenuGUI extends JFrame {
 	private void setContactsInput() {
 		contactsInput = new JButton("연락처 등록");
 		contactsInput.setBounds(120, 10, 100, 50);
-		// contactsInput.addActionListener(new ActionListener() {
-		// 	@Override
-		// 	public void actionPerformed(ActionEvent e) {
-		// 		new ContactsInputGUI(dataBase);
-		// 	}
-		// });
+		contactsInput.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new ContactsInputGUI(dataBase);
+			}
+		});
 	}
 
 	private void setContactsDeletion() {

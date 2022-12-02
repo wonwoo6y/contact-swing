@@ -7,6 +7,7 @@
     <list default="true" id="eada5e3f-42c9-4bfa-8010-51e0ad1a6e4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669896545423</updated>
-      <workItem from="1669896546635" duration="13815000" />
+      <workItem from="1669896546635" duration="19125000" />
     </task>
     <task id="LOCAL-00001" summary="초기 프로젝트">
       <created>1669896706518</created>
@@ -102,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669916623966</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="연락처 출력 프레임의 구조 변경">
+      <created>1669917061842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669917061842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +122,8 @@
     <MESSAGE value="메뉴 프레임을 띄운다" />
     <MESSAGE value="메뉴 프레임에서 연락처 출력 버튼 클릭시 연락처 출력 프레임을 생성한다" />
     <MESSAGE value="연락처 출력 프레임을 생성한다" />
-    <option name="LAST_COMMIT_MESSAGE" value="연락처 출력 프레임을 생성한다" />
+    <MESSAGE value="연락처 출력 프레임의 구조 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="연락처 출력 프레임의 구조 변경" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

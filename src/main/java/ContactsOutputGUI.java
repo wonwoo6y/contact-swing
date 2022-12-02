@@ -1,9 +1,7 @@
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.*;
-import javax.swing.table.TableModel;
+import javax.swing.table.DefaultTableModel;
 
 public class ContactsOutputGUI extends JFrame {
 	private DataBase dataBase;
@@ -33,12 +31,12 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private void setComponents() {
-		setButton();
-		setTable();
-		setScrollPane((Component)studentIdOutput);
+		setButtons();
+		setTables();
+		setScrollPanes((Component)studentIdOutput);
 	}
 
-	private void setButton() {
+	private void setButtons() {
 		setStudentIdInput();
 	}
 
@@ -53,15 +51,15 @@ public class ContactsOutputGUI extends JFrame {
 		// });
 	}
 
-	private void setTable() {
+	private void setTables() {
 		setStudentIdOutput();
 	}
 
 	private void setStudentIdOutput() {
-		studentIdOutput = new JTable();
+		studentIdOutput = new JTable(new DefaultTableModel());
 	}
 
-	private void setScrollPane(Component component) {
+	private void setScrollPanes(Component component) {
 		scrollPane = new JScrollPane(component);
 		scrollPane.setBounds(10, 50, 380, 910);
 	}
