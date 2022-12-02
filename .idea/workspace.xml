@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eada5e3f-42c9-4bfa-8010-51e0ad1a6e4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuGUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="eada5e3f-42c9-4bfa-8010-51e0ad1a6e4d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669896545423</updated>
-      <workItem from="1669896546635" duration="19125000" />
+      <workItem from="1669896546635" duration="19200000" />
     </task>
     <task id="LOCAL-00001" summary="초기 프로젝트">
       <created>1669896706518</created>
@@ -110,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669917061842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="연락처 등록 프레임을 생성한다">
+      <created>1669988523641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669988523641</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +126,8 @@
     <MESSAGE value="메뉴 프레임에서 연락처 출력 버튼 클릭시 연락처 출력 프레임을 생성한다" />
     <MESSAGE value="연락처 출력 프레임을 생성한다" />
     <MESSAGE value="연락처 출력 프레임의 구조 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="연락처 출력 프레임의 구조 변경" />
+    <MESSAGE value="연락처 등록 프레임을 생성한다" />
+    <option name="LAST_COMMIT_MESSAGE" value="연락처 등록 프레임을 생성한다" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
