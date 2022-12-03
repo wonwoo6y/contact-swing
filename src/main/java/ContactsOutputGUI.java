@@ -8,6 +8,9 @@ public class ContactsOutputGUI extends JFrame {
 	private JButton selectionButton;
 	private JTable studentIdTable;
 	private JScrollPane studentIdScrollPane;
+	private DefaultTableModel tableModel;
+	private String[] tableColumnNames;
+	private String[][] tableData;
 
 	public ContactsOutputGUI(DataBase dataBase) {
 		this.dataBase = dataBase;
@@ -33,7 +36,7 @@ public class ContactsOutputGUI extends JFrame {
 	private void setComponents() {
 		setButtons();
 		setTables();
-		setStudentIdScrollPane((Component)studentIdTable);
+		setStudentIdScrollPane(studentIdTable);
 	}
 
 	private void setButtons() {
@@ -43,12 +46,15 @@ public class ContactsOutputGUI extends JFrame {
 	private void setSelectionButton() {
 		selectionButton = new JButton("출력");
 		selectionButton.setBounds(175, 10, 50, 30);
-		// studentIdSelection.addActionListener(new ActionListener() {
-		// 	@Override
-		// 	public void actionPerformed(ActionEvent e) {
-		//
-		// 	}
-		// });
+		selectionButton.addActionListener(e -> {
+			tableColumnNames = dataBase.getFriendsFields();
+			tableData = dataBase.getFriendsData(tableColumnNames);
+			tableModel = new DefaultTableModel(tableData, tableColumnNames);
+			studentIdTable = new JTable(tableModel);
+			this.remove(studentIdScrollPane);
+			setStudentIdScrollPane(studentIdTable);
+			this.add(studentIdScrollPane);
+		});
 	}
 
 	private void setTables() {
@@ -56,7 +62,7 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private void setStudentIdTable() {
-		studentIdTable = new JTable(new DefaultTableModel());
+		studentIdTable = new JTable();
 	}
 
 	private void setStudentIdScrollPane(Component component) {
