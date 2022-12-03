@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -138,7 +137,7 @@ public class ContactsInputGUI extends JFrame {
 				System.out.println("나이 제한");
 				return;
 			}
-			if (dataBase.insertFriends(name, birthDate, phoneNumber, studentId)){
+			if (dataBase.insertFriend(name, birthDate, phoneNumber, studentId)){
 				System.out.println("데이터 삽입 성공");
 			} else {
 				System.out.println("데이터 삽입 실패");

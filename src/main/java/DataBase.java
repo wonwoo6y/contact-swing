@@ -36,7 +36,7 @@ public class DataBase {
 			+ "birth_date CHAR(10),"
 			+ "phone_number CHAR(13),"
 			+ "student_id CHAR(8),"
-			+ "PRIMARY KEY (student_id)"
+			+ "PRIMARY KEY (phone_number)"
 			+ ");";
 		Statement statement = connection.createStatement();
 		statement.executeUpdate(sql);
@@ -85,7 +85,7 @@ public class DataBase {
 		return result;
 	}
 
-	public boolean insertFriends(String name, String birthDate, String phoneNumber, String studentId) {
+	public boolean insertFriend(String name, String birthDate, String phoneNumber, String studentId) {
 		try {
 			String selectionSql = "SELECT * FROM friends WHERE student_id = ?;";
 			PreparedStatement selectionStatement = connection.prepareStatement(selectionSql);
@@ -106,6 +106,19 @@ public class DataBase {
 			insertionStatement.setString(4, studentId);
 			insertionStatement.executeUpdate();
 			insertionStatement.close();
+		} catch (SQLException e) {
+			return false;
+		}
+		return true;
+	}
+
+	public boolean deleteFriend(String phoneNumber) {
+		try {
+			String deletionSql = "DELETE FROM friends WHERE phone_number = ?;";
+			PreparedStatement deletionStatement = connection.prepareStatement(deletionSql);
+			deletionStatement.setString(1, phoneNumber);
+			deletionStatement.executeUpdate();
+			deletionStatement.close();
 		} catch (SQLException e) {
 			return false;
 		}

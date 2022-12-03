@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class ContactsDeletionGUI extends JFrame {
 	private DataBase dataBase;
-	private JLabel studentIdLabel;
-	private JTextField studentIdTextField;
+	private JLabel phoneNumberLabel;
+	private JTextField phoneNumberTextField;
 	private JButton deletionButton;
 
 	public ContactsDeletionGUI(DataBase dataBase) {
@@ -44,8 +44,8 @@ public class ContactsDeletionGUI extends JFrame {
 	}
 
 	private void setStudentIdLabel(int x, int y, int width, int height) {
-		studentIdLabel = new JLabel("학번");
-		studentIdLabel.setBounds(x, y, width, height);
+		phoneNumberLabel = new JLabel("휴대폰 번호");
+		phoneNumberLabel.setBounds(x, y, width, height);
 	}
 
 	private void setTextFields() {
@@ -57,8 +57,8 @@ public class ContactsDeletionGUI extends JFrame {
 	}
 
 	private void setStudentIdTextField(int x, int y, int width, int height) {
-		studentIdTextField = new JTextField();
-		studentIdTextField.setBounds(x, y, width, height);
+		phoneNumberTextField = new JTextField();
+		phoneNumberTextField.setBounds(x, y, width, height);
 	}
 
 	private void setButtons() {
@@ -67,6 +67,13 @@ public class ContactsDeletionGUI extends JFrame {
 		int width = 50;
 		int height = 30;
 		setDeletionButton(x, y, width, height);
+		deletionButton.addActionListener(e -> {
+			if (dataBase.deleteFriend(phoneNumberTextField.getText())){
+				System.out.println("삭제 성공");
+			} else {
+				System.out.println("삭제 실패");
+			}
+		});
 	}
 
 	private void setDeletionButton(int x, int y, int width, int height) {
@@ -75,8 +82,8 @@ public class ContactsDeletionGUI extends JFrame {
 	}
 
 	private void addComponents() {
-		this.add(studentIdLabel);
-		this.add(studentIdTextField);
+		this.add(phoneNumberLabel);
+		this.add(phoneNumberTextField);
 		this.add(deletionButton);
 	}
 

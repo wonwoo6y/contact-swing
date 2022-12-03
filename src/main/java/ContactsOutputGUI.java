@@ -57,6 +57,7 @@ public class ContactsOutputGUI extends JFrame {
 			this.remove(studentIdScrollPane);
 			setStudentIdScrollPane(studentIdTable);
 			this.add(studentIdScrollPane);
+			System.out.println("데이터 출력");
 		});
 	}
 
@@ -71,7 +72,6 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private String[][] addAgeData(String[][] data) {
-		System.out.println(data);
 		String[][] result = new String[data.length][];
 		for (int index = 0; index < result.length; index++) {
 			result[index] = new String[data[0].length + 1];
