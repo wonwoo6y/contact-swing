@@ -6,10 +6,10 @@ import javax.swing.*;
 
 public class MenuGUI extends JFrame {
 	private DataBase dataBase;
-	private JButton contactsOutput;
-	private JButton contactsInput;
-	private JButton contactsDeletion;
-	private JButton exit;
+	private JButton contactsOutputButton;
+	private JButton contactsInputButton;
+	private JButton contactsDeletionButton;
+	private JButton exitButton;
 
 	public MenuGUI(DataBase dataBase) {
 		this.dataBase = dataBase;
@@ -38,54 +38,45 @@ public class MenuGUI extends JFrame {
 	}
 
 	private void setButtons() {
-		setContactsOutput();
-		setContactsInput();
-		setContactsDeletion();
-		setExit();
+		setContactsOutputButton();
+		setContactsInputButton();
+		setContactsDeletionButton();
+		setExitButton();
 	}
 
-	private void setContactsOutput() {
-		contactsOutput = new JButton("연락처 출력");
-		contactsOutput.setBounds(10, 10, 100, 50);
-		contactsOutput.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				new ContactsOutputGUI(dataBase);
-			}
+	private void setContactsOutputButton() {
+		contactsOutputButton = new JButton("연락처 출력");
+		contactsOutputButton.setBounds(10, 10, 100, 50);
+		contactsOutputButton.addActionListener(e -> {
+			new ContactsOutputGUI(dataBase);
 		});
 	}
 
-	private void setContactsInput() {
-		contactsInput = new JButton("연락처 등록");
-		contactsInput.setBounds(120, 10, 100, 50);
-		contactsInput.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				new ContactsInputGUI(dataBase);
-			}
+	private void setContactsInputButton() {
+		contactsInputButton = new JButton("연락처 등록");
+		contactsInputButton.setBounds(120, 10, 100, 50);
+		contactsInputButton.addActionListener(e -> {
+			new ContactsInputGUI(dataBase);
 		});
 	}
 
-	private void setContactsDeletion() {
-		contactsDeletion = new JButton("연락처 삭제");
-		contactsDeletion.setBounds(230, 10, 100, 50);
-		// contactsDeletion.addActionListener(new ActionListener() {
-		// 	@Override
-		// 	public void actionPerformed(ActionEvent e) {
-		// 		new ContactsDeletion(dataBase);
-		// 	}
-		// });
+	private void setContactsDeletionButton() {
+		contactsDeletionButton = new JButton("연락처 삭제");
+		contactsDeletionButton.setBounds(230, 10, 100, 50);
+		contactsDeletionButton.addActionListener(e -> {
+			new ContactsDeletionGUI(dataBase);
+		});
 	}
 
-	private void setExit() {
-		exit = new JButton("끝내기");
-		exit.setBounds(120, 60, 100, 50);
+	private void setExitButton() {
+		exitButton = new JButton("끝내기");
+		exitButton.setBounds(120, 60, 100, 50);
 	}
 
 	private void addComponents() {
-		this.add(contactsOutput);
-		this.add(contactsInput);
-		this.add(contactsDeletion);
-		this.add(exit);
+		this.add(contactsOutputButton);
+		this.add(contactsInputButton);
+		this.add(contactsDeletionButton);
+		this.add(exitButton);
 	}
 }

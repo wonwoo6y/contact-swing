@@ -5,9 +5,9 @@ import javax.swing.table.DefaultTableModel;
 
 public class ContactsOutputGUI extends JFrame {
 	private DataBase dataBase;
-	private JButton studentIdSelection;
-	private JTable studentIdOutput;
-	private JScrollPane scrollPane;
+	private JButton selectionButton;
+	private JTable studentIdTable;
+	private JScrollPane studentIdScrollPane;
 
 	public ContactsOutputGUI(DataBase dataBase) {
 		this.dataBase = dataBase;
@@ -33,16 +33,16 @@ public class ContactsOutputGUI extends JFrame {
 	private void setComponents() {
 		setButtons();
 		setTables();
-		setScrollPanes((Component)studentIdOutput);
+		setStudentIdScrollPane((Component)studentIdTable);
 	}
 
 	private void setButtons() {
-		setStudentIdInput();
+		setSelectionButton();
 	}
 
-	private void setStudentIdInput() {
-		studentIdSelection = new JButton("출력");
-		studentIdSelection.setBounds(175, 10, 50, 30);
+	private void setSelectionButton() {
+		selectionButton = new JButton("출력");
+		selectionButton.setBounds(175, 10, 50, 30);
 		// studentIdSelection.addActionListener(new ActionListener() {
 		// 	@Override
 		// 	public void actionPerformed(ActionEvent e) {
@@ -52,20 +52,20 @@ public class ContactsOutputGUI extends JFrame {
 	}
 
 	private void setTables() {
-		setStudentIdOutput();
+		setStudentIdTable();
 	}
 
-	private void setStudentIdOutput() {
-		studentIdOutput = new JTable(new DefaultTableModel());
+	private void setStudentIdTable() {
+		studentIdTable = new JTable(new DefaultTableModel());
 	}
 
-	private void setScrollPanes(Component component) {
-		scrollPane = new JScrollPane(component);
-		scrollPane.setBounds(10, 50, 380, 910);
+	private void setStudentIdScrollPane(Component component) {
+		studentIdScrollPane = new JScrollPane(component);
+		studentIdScrollPane.setBounds(10, 50, 380, 910);
 	}
 
 	private void addComponents() {
-		this.add(studentIdSelection);
-		this.add(scrollPane);
+		this.add(selectionButton);
+		this.add(studentIdScrollPane);
 	}
 }

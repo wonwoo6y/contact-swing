@@ -4,15 +4,15 @@ import javax.swing.*;
 
 public class ContactsInputGUI extends JFrame {
 	private DataBase dataBase;
-	private JLabel nameMark;
-	private JLabel birthDataMark;
-	private JLabel phoneNumberMark;
-	private JLabel studentIdMark;
-	private JTextField nameInputBox;
-	private JTextField birthDataInputBox;
-	private JTextField phoneNumberInputBox;
-	private JTextField studentIdInputBox;
-	private JButton contactInput;
+	private JLabel nameLabel;
+	private JLabel birthDataLabel;
+	private JLabel phoneNumberLabel;
+	private JLabel studentIdLabel;
+	private JTextField nameTextField;
+	private JTextField birthDataTextField;
+	private JTextField phoneNumberTextField;
+	private JTextField studentIdTextField;
+	private JButton inputButton;
 
 	public ContactsInputGUI(DataBase dataBase) {
 		this.dataBase = dataBase;
@@ -46,33 +46,33 @@ public class ContactsInputGUI extends JFrame {
 		int y = 10;
 		int width = 60;
 		int height = 30;
-		setNameMark(x, y, width, height);
+		setNameLabel(x, y, width, height);
 		y += height;
-		setBirthDataMark(x, y, width, height);
+		setBirthDataButton(x, y, width, height);
 		y += height;
-		setPhoneNumberMark(x, y, width, height);
+		setPhoneNumberButton(x, y, width, height);
 		y += height;
-		setStudentIdMark(x, y, width, height);
+		setStudentIdButton(x, y, width, height);
 	}
 
-	private void setNameMark(int x, int y, int width, int height) {
-		nameMark = new JLabel("이름");
-		nameMark.setBounds(x, y, width, height);
+	private void setNameLabel(int x, int y, int width, int height) {
+		nameLabel = new JLabel("이름");
+		nameLabel.setBounds(x, y, width, height);
 	}
 
-	private void setBirthDataMark(int x, int y, int width, int height) {
-		birthDataMark = new JLabel("생년월일");
-		birthDataMark.setBounds(x, y, width, height);
+	private void setBirthDataButton(int x, int y, int width, int height) {
+		birthDataLabel = new JLabel("생년월일");
+		birthDataLabel.setBounds(x, y, width, height);
 	}
 
-	private void setPhoneNumberMark(int x, int y, int width, int height) {
-		phoneNumberMark = new JLabel("휴대폰 번호");
-		phoneNumberMark.setBounds(x, y, width, height);
+	private void setPhoneNumberButton(int x, int y, int width, int height) {
+		phoneNumberLabel = new JLabel("휴대폰 번호");
+		phoneNumberLabel.setBounds(x, y, width, height);
 	}
 
-	private void setStudentIdMark(int x, int y, int width, int height) {
-		studentIdMark = new JLabel("학번");
-		studentIdMark.setBounds(x, y, width, height);
+	private void setStudentIdButton(int x, int y, int width, int height) {
+		studentIdLabel = new JLabel("학번");
+		studentIdLabel.setBounds(x, y, width, height);
 	}
 
 	private void setTextFields() {
@@ -80,52 +80,52 @@ public class ContactsInputGUI extends JFrame {
 		int y = 10;
 		int width = 100;
 		int height = 30;
-		setNameInputBox(x, y, width, height);
+		setNameTextField(x, y, width, height);
 		y += height;
-		setBirthDataInputBox(x, y, width, height);
+		setBirthDataTextField(x, y, width, height);
 		y += height;
-		setPhoneNumberInputBox(x, y, width, height);
+		setPhoneNumberTextField(x, y, width, height);
 		y += height;
-		setStudentIdInputBox(x, y, width, height);
+		setStudentIdTextField(x, y, width, height);
 	}
 
-	private void setNameInputBox(int x, int y, int width, int height) {
-		nameInputBox = new JTextField();
-		nameInputBox.setBounds(x, y, width, height);
+	private void setNameTextField(int x, int y, int width, int height) {
+		nameTextField = new JTextField();
+		nameTextField.setBounds(x, y, width, height);
 	}
 
-	private void setBirthDataInputBox(int x, int y, int width, int height) {
-		birthDataInputBox = new JTextField();
-		birthDataInputBox.setBounds(x, y, width, height);
+	private void setBirthDataTextField(int x, int y, int width, int height) {
+		birthDataTextField = new JTextField();
+		birthDataTextField.setBounds(x, y, width, height);
 	}
 
-	private void setPhoneNumberInputBox(int x, int y, int width, int height) {
-		phoneNumberInputBox = new JTextField();
-		phoneNumberInputBox.setBounds(x, y, width, height);
+	private void setPhoneNumberTextField(int x, int y, int width, int height) {
+		phoneNumberTextField = new JTextField();
+		phoneNumberTextField.setBounds(x, y, width, height);
 	}
 
-	private void setStudentIdInputBox(int x, int y, int width, int height) {
-		studentIdInputBox = new JTextField();
-		studentIdInputBox.setBounds(x, y, width, height);
+	private void setStudentIdTextField(int x, int y, int width, int height) {
+		studentIdTextField = new JTextField();
+		studentIdTextField.setBounds(x, y, width, height);
 	}
 
 	private void setButtons() {
-		setContactInput(170, 55, 50, 30);
+		setInputButton(170, 55, 50, 30);
 	}
 
-	private void setContactInput(int x, int y, int width, int height) {
-		contactInput = new JButton("등록");
-		contactInput.setBounds(x, y, width, height);
+	private void setInputButton(int x, int y, int width, int height) {
+		inputButton = new JButton("등록");
+		inputButton.setBounds(x, y, width, height);
 	}
 	private void addComponents() {
-		this.add(nameMark);
-		this.add(birthDataMark);
-		this.add(phoneNumberMark);
-		this.add(studentIdMark);
-		this.add(nameInputBox);
-		this.add(birthDataInputBox);
-		this.add(phoneNumberInputBox);
-		this.add(studentIdInputBox);
-		this.add(contactInput);
+		this.add(nameLabel);
+		this.add(birthDataLabel);
+		this.add(phoneNumberLabel);
+		this.add(studentIdLabel);
+		this.add(nameTextField);
+		this.add(birthDataTextField);
+		this.add(phoneNumberTextField);
+		this.add(studentIdTextField);
+		this.add(inputButton);
 	}
 }

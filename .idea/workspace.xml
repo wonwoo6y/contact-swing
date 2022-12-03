@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eada5e3f-42c9-4bfa-8010-51e0ad1a6e4d" name="Changes" comment="" />
+    <list default="true" id="eada5e3f-42c9-4bfa-8010-51e0ad1a6e4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ContactsDeletionGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ContactsInputGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactsInputGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669896545423</updated>
-      <workItem from="1669896546635" duration="19200000" />
+      <workItem from="1669896546635" duration="23771000" />
     </task>
     <task id="LOCAL-00001" summary="초기 프로젝트">
       <created>1669896706518</created>
@@ -113,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669988523641</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="연락처 등록 프레임을 생성한다">
+      <created>1669988582114</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669988582114</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
