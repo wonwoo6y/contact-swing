@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Calendar;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -49,12 +50,53 @@ public class ContactsOutputGUI extends JFrame {
 		selectionButton.addActionListener(e -> {
 			tableColumnNames = dataBase.getFriendsFields();
 			tableData = dataBase.getFriendsData(tableColumnNames);
+			tableColumnNames = addAgeField(tableColumnNames);
+			tableData = addAgeData(tableData);
 			tableModel = new DefaultTableModel(tableData, tableColumnNames);
 			studentIdTable = new JTable(tableModel);
 			this.remove(studentIdScrollPane);
 			setStudentIdScrollPane(studentIdTable);
 			this.add(studentIdScrollPane);
 		});
+	}
+
+	private String[] addAgeField(String[] fields) {
+		String[] result = new String[fields.length + 1];
+		result[0] = fields[0];
+		result[1] = "Age";
+		for (int index = 1; index < fields.length; index++) {
+			result[index + 1] = fields[index];
+		}
+		return result;
+	}
+
+	private String[][] addAgeData(String[][] data) {
+		System.out.println(data);
+		String[][] result = new String[data.length][];
+		for (int index = 0; index < result.length; index++) {
+			result[index] = new String[data[0].length + 1];
+		}
+
+		for (int row = 0; row < data.length; row++) {
+			result[row][0] = data[row][0];
+			result[row][1] = getAge(data[row][1]);
+			for (int col = 1; col < data[row].length; col++) {
+				result[row][col + 1] = data[row][col];
+			}
+		}
+		return result;
+	}
+
+	private String getAge(String date) {
+		Calendar now = Calendar.getInstance();
+		Integer currentYear = now.get(Calendar.YEAR);
+
+		Integer inputYear = getYear(date);
+		return String.valueOf(currentYear - inputYear + 1);
+	}
+
+	private Integer getYear(String date) {
+		return Integer.parseInt(date.substring(0, 4));
 	}
 
 	private void setTables() {
