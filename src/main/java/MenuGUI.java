@@ -71,6 +71,9 @@ public class MenuGUI extends JFrame {
 	private void setExitButton() {
 		exitButton = new JButton("끝내기");
 		exitButton.setBounds(120, 60, 100, 50);
+		exitButton.addActionListener(e -> {
+			System.exit(0);
+		});
 	}
 
 	private void addComponents() {
