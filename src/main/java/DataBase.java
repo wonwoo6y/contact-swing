@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -35,7 +36,7 @@ public class DataBase {
 			+ "birth_date CHAR(10),"
 			+ "phone_number CHAR(13),"
 			+ "student_id CHAR(8),"
-			+ "PRIMARY KEY (phone_number)"
+			+ "PRIMARY KEY (student_id)"
 			+ ");";
 		Statement statement = connection.createStatement();
 		statement.executeUpdate(sql);
@@ -82,5 +83,32 @@ public class DataBase {
 			result = null;
 		}
 		return result;
+	}
+
+	public boolean insertFriends(String name, String birthDate, String phoneNumber, String studentId) {
+		try {
+			String selectionSql = "SELECT * FROM friends WHERE student_id = ?;";
+			PreparedStatement selectionStatement = connection.prepareStatement(selectionSql);
+			selectionStatement.setString(1, studentId);
+			ResultSet resultSet = selectionStatement.executeQuery();
+			selectionStatement.close();
+			if (resultSet.next()) {
+				System.out.println("학번 데이터 존재");
+				resultSet.close();
+				return false;
+			}
+			resultSet.close();
+			String insertionSql = "INSERT INTO friends(name, birth_date, phone_number, student_id) values (?, ?, ?, ?);";
+			PreparedStatement insertionStatement = connection.prepareStatement(insertionSql);
+			insertionStatement.setString(1, name);
+			insertionStatement.setString(2, birthDate);
+			insertionStatement.setString(3, phoneNumber);
+			insertionStatement.setString(4, studentId);
+			insertionStatement.executeUpdate();
+			insertionStatement.close();
+		} catch (SQLException e) {
+			return false;
+		}
+		return true;
 	}
 }

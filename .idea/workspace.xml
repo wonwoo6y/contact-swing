@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eada5e3f-42c9-4bfa-8010-51e0ad1a6e4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactsOutputGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ContactsInputGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactsInputGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669896545423</updated>
-      <workItem from="1669896546635" duration="30166000" />
+      <workItem from="1669896546635" duration="37285000" />
     </task>
     <task id="LOCAL-00001" summary="초기 프로젝트">
       <created>1669896706518</created>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670051995572</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="연락처 출력 기능 구현">
+      <created>1670059456320</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670059456320</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +153,8 @@
     <MESSAGE value="연락처 출력 프레임의 구조 변경" />
     <MESSAGE value="연락처 등록 프레임을 생성한다" />
     <MESSAGE value="연락처 삭제 프레임을 생성한다" />
-    <option name="LAST_COMMIT_MESSAGE" value="연락처 삭제 프레임을 생성한다" />
+    <MESSAGE value="연락처 출력 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="연락처 출력 기능 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
